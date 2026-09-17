@@ -61,6 +61,9 @@
 - OCR
 - 画像全体の意味・種類
 
+本検証で使用した画像は、すべて本プロジェクト用に自身で用意しています。  
+`001.png` ～ `005.png` は自身で作成した手描き画像、`000.png` は自身で構築・調整したStable Diffusion環境で生成した画像であり、外部サイトや第三者の公開画像を評価データとして転載したものではありません。
+
 ### 定量評価画像の例：001.png
 
 <img src="images/001.png" width="450" alt="001.png">
@@ -75,7 +78,7 @@
 
 <img src="images/000.png" width="450" alt="000.png">
 
-`000.png` はStable Diffusionで生成した通常のイラストです。
+`000.png` は、手描きの評価画像とは異なる通常の生成イラストとして使用しました。
 
 この画像にはGround Truthを設定せず、両モデルが自然な画像に対してどのような説明を行うかを比較する **定性評価** に使用しました。
 
@@ -349,7 +352,7 @@ F1-score  ≒ 0.614
 
 ## 11. Ground Truthなしの定性比較
 
-`000.png` ではGround Truthを設定せず、Stable Diffusionで生成したイラストを両モデルへ入力しました。
+`000.png` ではGround Truthを設定せず、自身のStable Diffusion環境で生成したイラストを両モデルへ入力しました。
 
 両モデルとも、
 
@@ -419,7 +422,7 @@ results/
 multimodal-llm-evaluation/
 │
 ├── README.md
-├── multimodal_model_comparison.ipynb
+├── 05_Qwen3-VLとOpenAIによる画像理解比較.ipynb
 ├── ground_truth.json
 │
 ├── images/
